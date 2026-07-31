@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.linkdeal.www/mcp",
+  "title": "LinkDeal",
+  "description": "Find B2B leads from LinkedIn engagement, enrich contacts and deliver to Slack.",
+  "repository": {
+    "url": "https://github.com/LinkDeal/mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://app.linkdeal.ai/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token. Generate an API key at app.linkdeal.ai/settings. Keys start with ld_",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
